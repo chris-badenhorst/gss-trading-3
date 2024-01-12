@@ -12,7 +12,7 @@
   background-image: url("/public/images/building.jpg");
 }
 .header-container {
-  background-image: url("/public/images/intro-image_resized.jpg");
+  background-image: url("/public/images/intro-image.jpg");
 }
 
 .header-container,
@@ -42,32 +42,4 @@
 footer {
   background-color: #6495ed;
   margin-top: 20px;
-}
-.categorie-image {
-  max-width: 500px; /* Set the maximum width */
-  width: 100%; /* Allow the image to take up the full width of its container */
-  height: auto; /* Allow the height to adjust proportionally */
-  max-height: 500px; /* Set a maximum height */
-}
-
-hr.hr {
-  border: none; /* remove default border */
-  border-top: 5px dotted black; /* add a 2px dotted border on top */
-  margin: 20px 0; /* add some vertical margin for spacing */
-  height: 10px; /* set the height */
-}
-
-.about-image {
-  max-height: 300px;
-  max-width: 300px;
-}
-
-h2 {
-  color: #6495ed;
-}
-main {
-  min-height: 100vh;
-}
-.contact-image {
-  background-image: url("/public/images/pointing.jpg");
 }

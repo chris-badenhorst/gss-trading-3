@@ -1,120 +1,95 @@
 import React from "react";
+import Navigation from "../components/Navigation";
 import { Container, Col, Row, Image, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 const SecurityPage = () => {
-  // Array of security services with improved naming conventions
-  const securityServices = [
+  const services = [
     {
       id: 1,
-      name: "CCTV",
-      description:
-        "Expert installation and maintenance of CCTV systems for surveillance and security.",
-      image: "images/cctv_resized.jpg",
+      name: "Roofs and Ceilings",
+      description: "Expert roofing and ceiling services.",
+      image: "images/roof.jpg",
     },
     {
       id: 2,
-      name: "Alarms",
-      description:
-        "Professional alarm system installation and configuration for enhanced security measures.",
-      image: "images/alarm_resized.jpg",
+      name: "Painting",
+      description: "Professional painting solutions for your space.",
+      image: "images/painting.jpg",
     },
     {
       id: 3,
-      name: "Electric Fencing",
-      description:
-        "High-quality installation and maintenance of electric fencing systems to secure premises.",
-      image: "images/fencing_resized.jpg",
+      name: "Tilings of Floors and Walls",
+      description: "High-quality tiling services for floors and walls.",
+      image: "images/tiling.jpg",
     },
     {
       id: 4,
-      name: "Gate & Garage Motors",
-      description:
-        "Skilled installation and repair of gate and garage motors for convenient access control.",
-      image: "images/motors.jpg",
+      name: "Brickwork and Plastering",
+      description: "Skilled brickwork and plastering services.",
+      image: "images/bricks.jpg",
     },
     {
       id: 5,
-      name: "Gate & Garage Doors",
-      description:
-        "Expert replacement and installation services for gate and garage doors.",
-      image: "images/doors_resized.jpg",
+      name: "Windows and Doorframe Replacements",
+      description: "Replacement and installation of windows and doorframes.",
+      image: "images/frames.jpg",
     },
     {
       id: 6,
-      name: "Smoke & Fire Detection Systems",
-      description:
-        "Installation of advanced smoke and fire detection systems for improved safety.",
-      image: "images/smoke_resized.jpg",
+      name: "Laying of Foundations",
+      description: "Foundation laying services for stability and durability.",
+      image: "images/foundation.jpg",
     },
   ];
-
   return (
     <Container>
+      <Navigation mode={"dark"} background={"#6495ed"} />
       <Row className="mt-5 align-items-center">
-        <Col xl={7} lg={7} md={6}>
-          {/* Lazy loading for the main security image */}
-          <Image
-            className="mt-4 px-2 categorie-image"
-            fluid
-            src="images/security2.jpg"
-            loading="lazy"
-          />
+        <Col xl={7} lg={7} md={4}>
+          <Image className="mt-4 px-2" fluid src="images/building.jpg" />
         </Col>
-        <Col className="my-3 py-3" xl={5} lg={5} md={6} sm={10}>
-          <h1>Security</h1>
+        <Col className="my-3 py-3" xl={5} lg={5} md={8} sm={10}>
+          <h1>Building</h1>
           <div className="color-blue">
-            <h3>Elevate Your Spaces with Expert Security Solutions</h3>
+            <h3>Elevate Your Spaces with Expert Building Solutions</h3>
           </div>
           <p>
-            {/* Improved description */}
-            At Gsstrading3, we specialize in delivering exceptional security
-            solutions that redefine safety and protection. From cutting-edge
-            technology installations to meticulous system configuration, we
-            offer comprehensive services to enhance the security of your
-            premises. Our team is dedicated to providing top-notch security
-            services, ensuring a seamless blend of functionality and peace of
-            mind. Choose Gsstrading3 for your security needs, where expertise
-            meets excellence.
+            At Gsstrading3, we specialize in delivering exceptional building
+            solutions that redefine spaces. From innovative designs to
+            meticulous construction, we offer comprehensive services to enhance
+            the structural integrity and aesthetics of your projects. Our team
+            is dedicated to providing top-notch building services, ensuring a
+            seamless blend of functionality and style. Choose Gsstrading3 for
+            your building needs, where craftsmanship meets excellence.
           </p>
         </Col>
       </Row>
 
       <Container className="background-blue text-white text-center my-2 py-2">
-        <h2>What We Offer</h2>
+        <h2>What we offer</h2>
       </Container>
-
       <Row>
-        <Link to="/detail">
-          <p className="color-blue">
-            <u>How Does It Work?</u>
-          </p>
-        </Link>
-        {securityServices.map((service) => (
-          <Col className="py-1 px-1" key={service.id} md={4}>
+        {services.map((service) => (
+          <Col className="py-1 px1" key={service.id} md={4}>
             <Card style={{ width: "100%", height: "100%" }}>
-              {/* Lazy loading for service images */}
               <Card.Img
                 className="card-image"
                 variant="top"
                 src={service.image}
-                loading="lazy"
               />
               <Card.Body>
                 <Card.Title>{service.name}</Card.Title>
                 <Card.Text>{service.description}</Card.Text>
-                <Button variant="primary">View</Button>
+                <Button variant="primary">view</Button>
               </Card.Body>
             </Card>
           </Col>
         ))}
       </Row>
-
       <Container className="background-blue text-white text-center my-2 py-2">
-        <h2>Skeptical?</h2>
+        <h2>Sceptical ?</h2>
       </Container>
     </Container>
   );
 };
-
 export default SecurityPage;
